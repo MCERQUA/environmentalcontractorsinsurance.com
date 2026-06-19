@@ -9,23 +9,23 @@ import { SITE, CREDENTIALS } from "@/lib/site";
 import { ArrowRight, HardHat, ShieldCheck, Award, Handshake } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About Framing Contractor Insurance | Contractors Choice Agency",
+  title: "About Environmental Contractor Insurance | Contractors Choice Agency",
   description:
-    "Framing Contractor Insurance is the trades-focused division of Contractors Choice Agency, founded in 2005 by former contractor Josh Cotner. General liability, workers' comp, builder's risk, and tools coverage for framing crews. Licensed all 50 states.",
+    "Environmental Contractor Insurance is the environmental-trades division of Contractors Choice Agency, founded in 2005 by Josh Cotner. Contractors Pollution Liability (CPL), general liability, professional liability, and workers' comp for environmental remediation and hazmat crews. Licensed all 50 states.",
   alternates: { canonical: `${SITE.url}/about` },
 };
 
 const values = [
-  { icon: HardHat, title: "Trades-first, always", desc: "Josh spent years in the trades before starting the agency. We speak the language of framing because we know what happens when coverage fails at claim time." },
-  { icon: ShieldCheck, title: "Coverage that closes the gaps", desc: "Height exclusions, stolen tools, and jobsite lumber theft — we address the exposures standard markets miss or exclude." },
-  { icon: Award, title: "A-rated markets only", desc: "We shop carriers with the financial strength and trades experience to be there when a fall or fire claim hits." },
+  { icon: HardHat, title: "Trades-first, always", desc: "Josh spent years in the trades before starting the agency. We speak the language of environmental contracting because we know what happens when coverage fails at claim time." },
+  { icon: ShieldCheck, title: "Coverage that closes the gaps", desc: "Pollution exclusions, contaminated releases, and mis-classed abatement crews — we address the exposures standard markets miss or exclude." },
+  { icon: Award, title: "A-rated environmental markets", desc: "We shop carriers with the financial strength and environmental underwriting experience to be there when a contamination or hazmat claim hits." },
   { icon: Handshake, title: "Honest, no-pressure advice", desc: "If you don't need a line of coverage, we'll tell you. We earn trust by being straight about what your crew actually requires." },
 ];
 
 const timeline = [
   { year: "2005", title: "Contractors Choice Agency founded", desc: "Josh Cotner opens CCA in Chandler, AZ, after years working in the trades — built to insure contractors the right way." },
-  { year: "20 yrs", title: "Expanded to specialty trades markets", desc: "After placing programs for dozens of contractor categories, CCA deepens its focus on framing and rough-carpentry crews with unique risk profiles." },
-  { year: "Today", title: "Dedicated framing contractor division", desc: "Framing Contractor Insurance focuses CCA's expertise on framers — crews where falls, nail-gun injuries, and jobsite theft are the real risks." },
+  { year: "20 yrs", title: "Expanded to environmental specialty markets", desc: "After placing programs for dozens of contractor categories, CCA deepens its focus on environmental remediation and hazmat crews with unique pollution and exposure risks." },
+  { year: "Today", title: "Dedicated environmental contractor division", desc: "Environmental Contractor Insurance focuses CCA's expertise on environmental contractors — crews where pollution liability, asbestos/mold/lead abatement, and contaminated-site cleanup are the real risks." },
 ];
 
 export default function AboutPage() {
@@ -48,16 +48,16 @@ export default function AboutPage() {
             <FadeIn>
               <span className="pill-clay">About us</span>
               <h1 className="mt-5 font-heading font-extrabold text-espresso text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight">
-                Built by a contractor,{" "}
+                Built by people who know the work,{" "}
                 <span className="bg-gradient-to-r from-clay via-clay-light to-gold-dark bg-clip-text text-transparent">
-                  for framers
+                  for environmental contractors
                 </span>
                 .
               </h1>
               <p className="mt-6 lead">
-                Framing Contractor Insurance is the trades-focused division of Contractors
-                Choice Agency — founded in 2005 by Josh Cotner, a former contractor who knows
-                exactly what happens when a height exclusion shows up in a fall-claim denial.
+                Environmental Contractor Insurance is the environmental-trades division of
+                Contractors Choice Agency — founded in 2005 by Josh Cotner, who knows exactly
+                what happens when a pollution exclusion shows up in a contamination-claim denial.
               </p>
               <div className="mt-7 flex flex-col sm:flex-row gap-3">
                 <Link href="/quote" className="btn-primary">Get a quote <ArrowRight className="h-5 w-5" /></Link>
@@ -67,8 +67,8 @@ export default function AboutPage() {
             <FadeIn direction="left">
               <div className="rounded-t-[12rem] rounded-b-3xl overflow-hidden border-4 border-white shadow-warm-lg">
                 <img
-                  src="/images/crew-portrait.jpg"
-                  alt="A framing contractor on a residential build site"
+                  src="/images/team-portrait.jpg"
+                  alt="Environmental contractor team in PPE at a remediation site"
                   className="w-full h-[360px] md:h-[440px] object-cover"
                   loading="lazy"
                 />
