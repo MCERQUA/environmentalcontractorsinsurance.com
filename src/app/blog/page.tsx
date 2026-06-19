@@ -9,14 +9,14 @@ import { SITE } from "@/lib/site";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Framing Contractor Insurance Blog — Guides & Insights",
+  title: "Environmental Contractor Insurance Blog — Guides & Insights",
   description:
-    "Practical insurance guidance for framing & rough-carpentry contractors: general liability, workers' comp (class 5403), builder's risk, tools & equipment, and commercial auto.",
+    "Practical insurance guidance for environmental & remediation contractors: Contractors Pollution Liability (CPL), general liability, professional liability, workers' comp for abatement crews, and commercial auto.",
   alternates: { canonical: `${SITE.url}/blog` },
   openGraph: {
-    title: "Framing Contractor Insurance Blog | Contractors Choice Agency",
+    title: "Environmental Contractor Insurance Blog | Contractors Choice Agency",
     description:
-      "Practical insurance guidance for framing contractors: general liability, workers' comp, builder's risk, tools & equipment, and commercial auto.",
+      "Practical insurance guidance for environmental contractors: CPL, GL, professional liability, workers' comp, and commercial auto.",
     url: `${SITE.url}/blog`,
   },
 };

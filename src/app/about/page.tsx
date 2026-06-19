@@ -98,11 +98,12 @@ export default function AboutPage() {
           <div className="container-tight">
             <FadeIn className="max-w-2xl mb-12">
               <span className="eyebrow"><span className="h-px w-8 bg-clay" />Our story</span>
-              <h2 className="mt-3 h-section">From the jobsite to the agency.</h2>
+              <h2 className="mt-3 h-section">From the field to the agency.</h2>
               <p className="mt-4 lead">
-                Josh Cotner swung a hammer, read plans, and pulled permits before founding CCA in 2005.
-                That background is why we understand what&rsquo;s at stake when a framer falls and the
-                carrier cites a height exclusion — or when a lumber package walks off the site overnight.
+                Josh Cotner worked in the trades before founding CCA in 2005.
+                That background is why we understand what&rsquo;s at stake when a pollution condition arises
+                and the carrier cites the pollution exclusion — or when a frac tank leaks at a remediation site
+                and the generic policy denies the claim.
               </p>
             </FadeIn>
             <div className="space-y-6">
