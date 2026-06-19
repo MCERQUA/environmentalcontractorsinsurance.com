@@ -1,10 +1,10 @@
 import type { Config } from "tailwindcss";
 
 /* ============================================================
-   FRAMING CONTRACTOR INSURANCE — "Timber Frame" palette
+   ENVIRONMENTAL CONTRACTOR INSURANCE — "Clean Earth" palette
    Token NAMES are inherited from the shared component architecture;
-   VALUES are remapped to forest-green (primary) / copper (secondary) / amber (accent).
-   clay = forest green · sage = copper · gold = amber · cream = paper · sand = stone
+   VALUES are remapped to deep teal (primary) / leaf green (secondary) / slate-teal (accent).
+   clay = deep teal · sage = leaf green · gold = slate-teal · cream = paper · sand = cool stone
    ============================================================ */
 
 const config: Config = {
@@ -18,58 +18,58 @@ const config: Config = {
       colors: {
         // === Backgrounds ===
         cream: "#FBF8F3",          // page background (warm paper)
-        sand: "#F2EDE3",           // alt section bg (stone)
+        sand: "#EEF3F1",           // alt section bg (cool stone)
         white: "#FFFFFF",          // cards
-        // === Primary — Forest Green (token name: clay) ===
+        // === Primary — Deep Teal (token name: clay) ===
         clay: {
-          DEFAULT: "#1F4D3A",      // primary — deep framing forest green
-          dark: "#163A2C",
-          light: "#2E6B52",
-          50: "#ECF3F0",
-          100: "#CFE2D9",
-          200: "#A3C5B3",
-          300: "#6FA689",
-          400: "#3E8362",
-          500: "#2E6B52",
-          600: "#1F4D3A",
-          700: "#163A2C",
-          800: "#0F2A20",
-          900: "#091A13",
+          DEFAULT: "#0E5E5A",      // primary — deep teal (clay token)
+          dark: "#0A4744",
+          light: "#1A7A75",
+          50: "#EAF4F3",
+          100: "#C9E4E2",
+          200: "#93CCC8",
+          300: "#5DB1AB",
+          400: "#1A7A75",
+          500: "#0E5E5A",
+          600: "#0A4744",
+          700: "#073330",
+          800: "#05221F",
+          900: "#031513",
         },
-        // === Secondary — Copper / Terracotta (token name: sage) ===
+        // === Secondary — Leaf Green (token name: sage) ===
         sage: {
-          DEFAULT: "#B5651D",      // secondary — copper / warm terracotta
-          dark: "#8F4E14",
-          light: "#D08A3E",
-          50: "#FBF1E9",
-          100: "#F5DFC9",
-          200: "#ECC091",
-          300: "#DFA45A",
-          400: "#CE8534",
-          500: "#B5651D",
-          600: "#8F4E14",
-          700: "#6F3C10",
+          DEFAULT: "#4C9A2A",      // secondary — leaf green
+          dark: "#3A7820",
+          light: "#6FB848",
+          50: "#F0F7EA",
+          100: "#DCEECB",
+          200: "#B6DD8E",
+          300: "#8BC34A",
+          400: "#6FB848",
+          500: "#4C9A2A",
+          600: "#3A7820",
+          700: "#2C5A18",
         },
-        // === Accent — Amber (token name: gold) ===
+        // === Accent — Slate-Teal (token name: gold) ===
         gold: {
-          DEFAULT: "#E0A45A",      // accent — warm amber highlight
-          dark: "#C2853A",
-          light: "#ECC391",
-          50: "#FBF3E8",
-          100: "#F7E6CE",
-          200: "#ECC391",
-          300: "#E0A45A",
-          400: "#D9A441",
-          500: "#C2853A",
-          600: "#9C671B",
+          DEFAULT: "#7FB3A8",      // accent — slate-teal highlight
+          dark: "#5C9488",
+          light: "#A4CDC4",
+          50: "#EFF6F4",
+          100: "#D9E9E5",
+          200: "#A4CDC4",
+          300: "#7FB3A8",
+          400: "#5C9488",
+          500: "#437B70",
+          600: "#2E5A52",
         },
         // === Text ===
-        espresso: "#1A2620",       // headings (deep green-charcoal ink)
-        cocoa: "#3F4A44",          // body (graphite-green)
-        mocha: "#6B7872",          // muted (slate)
+        espresso: "#122E2C",       // headings (deep teal-charcoal ink)
+        cocoa: "#3A4A48",          // body (graphite-teal)
+        mocha: "#6B7B78",          // muted (slate)
         // === Borders / dividers ===
-        adobe: "#E2DCD0",          // warm birch border
-        adobeDark: "#D0C8B8",
+        adobe: "#DCE6E2",          // cool stone border
+        adobeDark: "#C2D2CD",
       },
       fontFamily: {
         heading: ["var(--font-heading)", "system-ui", "sans-serif"],
@@ -82,20 +82,21 @@ const config: Config = {
         "5xl": "2.5rem",
       },
       backgroundImage: {
+        // sunrise-bands remapped to contour-style teal/leaf/slate banding
         "sunrise-bands":
-          "linear-gradient(180deg, #FBF8F3 0%, #F4EFE4 40%, #FBF1E6 70%, #FBF8F3 100%)",
+          "linear-gradient(180deg, #FBF8F3 0%, #EEF3F1 40%, #EAF4F3 70%, #FBF8F3 100%)",
         "warm-radial":
-          "radial-gradient(circle at 30% 20%, rgba(181,101,29,0.10) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(31,77,58,0.07) 0%, transparent 55%)",
-        "clay-gradient": "linear-gradient(135deg, #1F4D3A 0%, #2E6B52 100%)",
-        "sage-gradient": "linear-gradient(135deg, #B5651D 0%, #D08A3E 100%)",
-        "gold-gradient": "linear-gradient(135deg, #E0A45A 0%, #ECC391 100%)",
+          "radial-gradient(circle at 30% 20%, rgba(76,154,42,0.10) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(14,94,90,0.08) 0%, transparent 55%)",
+        "clay-gradient": "linear-gradient(135deg, #0E5E5A 0%, #1A7A75 100%)",
+        "sage-gradient": "linear-gradient(135deg, #4C9A2A 0%, #6FB848 100%)",
+        "gold-gradient": "linear-gradient(135deg, #7FB3A8 0%, #A4CDC4 100%)",
       },
       boxShadow: {
-        warm: "0 10px 40px -15px rgba(31, 77, 58, 0.20), 0 4px 12px -6px rgba(26, 38, 32, 0.08)",
-        "warm-lg": "0 30px 70px -20px rgba(31, 77, 58, 0.25), 0 10px 30px -10px rgba(26, 38, 32, 0.10)",
-        card: "0 2px 8px -2px rgba(26, 38, 32, 0.06), 0 1px 3px -1px rgba(26, 38, 32, 0.04)",
-        "card-hover": "0 20px 50px -15px rgba(31, 77, 58, 0.22), 0 8px 20px -8px rgba(26, 38, 32, 0.10)",
-        arch: "inset 0 -8px 30px -10px rgba(31, 77, 58, 0.10)",
+        warm: "0 10px 40px -15px rgba(14, 94, 90, 0.20), 0 4px 12px -6px rgba(18, 46, 44, 0.08)",
+        "warm-lg": "0 30px 70px -20px rgba(14, 94, 90, 0.25), 0 10px 30px -10px rgba(18, 46, 44, 0.10)",
+        card: "0 2px 8px -2px rgba(18, 46, 44, 0.06), 0 1px 3px -1px rgba(18, 46, 44, 0.04)",
+        "card-hover": "0 20px 50px -15px rgba(14, 94, 90, 0.22), 0 8px 20px -8px rgba(18, 46, 44, 0.10)",
+        arch: "inset 0 -8px 30px -10px rgba(14, 94, 90, 0.10)",
       },
       keyframes: {
         "fade-up": {
