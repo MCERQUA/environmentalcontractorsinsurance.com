@@ -10,11 +10,11 @@ import { US_STATES, QUOTE_SERVICE_TYPES, YEARS_OPTIONS } from "@/lib/content";
 import { CheckCircle2, ShieldCheck, ArrowRight, Phone, Clock, Zap, MapPin } from "lucide-react";
 
 const WEBHOOK_URL =
-  "https://josh.jam-bot.com/social-api/api/leads/webhook/netlify?tenant=josh&site=framingcontractorinsurance.com";
+  "https://josh.jam-bot.com/social-api/api/leads/webhook/netlify?tenant=josh&site=environmentalcontractorsinsurance.com";
 
 const trustItems = [
-  { icon: ShieldCheck, title: "Built for framers", desc: "Policies written for framing & rough-carpentry crews — not generic handyman coverage." },
-  { icon: Zap, title: "~15-minute quotes", desc: "Real quotes from real markets, fast." },
+  { icon: ShieldCheck, title: "Built for environmental contractors", desc: "Policies written for remediation, abatement & hazmat crews — not generic contractor coverage." },
+  { icon: Zap, title: "~15-minute quotes", desc: "Real quotes from real environmental markets, fast." },
   { icon: Clock, title: "2-hour claims response", desc: "When a loss hits, you reach a person." },
   { icon: MapPin, title: "All 50 states", desc: "Licensed nationwide — NPN #8608479." },
 ];
@@ -50,7 +50,7 @@ export default function QuotePage() {
       await fetch(WEBHOOK_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ form_name: "quote", source: "framingcontractorinsurance.com", ...formData }),
+        body: JSON.stringify({ form_name: "quote", source: "environmentalcontractorsinsurance.com", ...formData }),
       });
       setSubmitted(true);
     } catch {
@@ -75,12 +75,12 @@ export default function QuotePage() {
               <h1 className="mt-5 font-heading font-extrabold text-espresso text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight">
                 Get your{" "}
                 <span className="bg-gradient-to-r from-clay via-clay-light to-gold-dark bg-clip-text text-transparent">
-                  framing contractor insurance quote
+                  environmental contractor insurance quote
                 </span>
               </h1>
               <p className="mt-5 lead">
-                Tell us about your framing operation. We&rsquo;ll shop A-rated
-                specialty trades markets and come back with real quotes in about
+                Tell us about your remediation operation. We&rsquo;ll shop A-rated
+                environmental specialty markets and come back with real quotes in about
                 15 minutes — no obligation.
               </p>
             </FadeIn>
@@ -167,14 +167,14 @@ export default function QuotePage() {
                         </div>
                         <div>
                           <label htmlFor="businessName" className={labelClass}>Business name *</label>
-                          <input id="businessName" name="businessName" type="text" required value={formData.businessName} onChange={handleChange} placeholder="Smith Brothers Framing LLC" className={inputClass} />
+                          <input id="businessName" name="businessName" type="text" required value={formData.businessName} onChange={handleChange} placeholder="Clean Earth Remediation LLC" className={inputClass} />
                         </div>
                       </div>
 
                       <div className="grid sm:grid-cols-2 gap-4">
                         <div>
                           <label htmlFor="email" className={labelClass}>Email *</label>
-                          <input id="email" name="email" type="email" required value={formData.email} onChange={handleChange} placeholder="jane@smithframing.com" className={inputClass} />
+                          <input id="email" name="email" type="email" required value={formData.email} onChange={handleChange} placeholder="jane@cleanearthremediation.com" className={inputClass} />
                         </div>
                         <div>
                           <label htmlFor="phone" className={labelClass}>Phone *</label>
@@ -214,7 +214,7 @@ export default function QuotePage() {
                         </label>
                         <textarea
                           id="message" name="message" rows={4} value={formData.message}
-                          onChange={handleChange} placeholder="Crew size, residential vs. commercial, typical project size, W-2 vs. subs, coverage lines needed, current insurer, loss history, or anything else that helps us quote accurately…"
+                          onChange={handleChange} placeholder="Abatement vs. soil/groundwater vs. tank removal, crew size, project types, W-2 vs. subs, coverage lines needed, current insurer, loss history, or anything else that helps us quote accurately…"
                           className={`${inputClass} resize-none`}
                         />
                       </div>
