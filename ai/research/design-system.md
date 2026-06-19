@@ -1,30 +1,31 @@
-# Design System — Framing Contractor Insurance ("Timber Frame")
+# Design System — Environmental Contractor Insurance ("Clean Earth")
 
-Light, corporate, trades-industrial. Distinct from sibling CCA sites.
+Light, corporate, environmental-clean. Distinct from sibling CCA sites (not the green/copper framing palette).
 
 ## Palette (Tailwind token NAMES are shared across the component architecture; VALUES remapped here)
-- **Primary — forest green** (`clay`): `#1F4D3A` (deep framing green), dark `#163A2C`, light `#2E6B52`
-- **Secondary — copper / terracotta** (`sage`): `#B5651D`, dark `#8F4E14`, light `#D08A3E`
-- **Accent — amber** (`gold`): `#E0A45A`
-- Backgrounds: `cream #FBF8F3`, `sand #F2EDE3`, white
-- Text: `espresso #1A2620` (headings), `cocoa #3F4A44` (body), `mocha #6B7872` (muted)
-- Border: `adobe #E2DCD0`
+- **Primary — deep teal** (`clay`): `#0E5E5A` (deep teal), dark `#0A4744`, light `#1A7A75`
+- **Secondary — leaf green** (`sage`): `#4C9A2A`, dark `#3A7820`, light `#6FB848`
+- **Accent — slate-teal** (`gold`): `#7FB3A8`, dark `#5C9488`, light `#A4CDC4`
+- Backgrounds: `cream #FBF8F3`, `sand #EEF3F1` (cool stone), white
+- Text: `espresso #122E2C` (headings), `cocoa #3A4A48` (body), `mocha #6B7B78` (muted)
+- Border: `adobe #DCE6E2`
 
 ## Typography
-- Headings: **Sora** (geometric, structural) via next/font
-- Body: **Inter**
+- Headings: **Outfit** (geometric, modern, clean-earth) via next/font
+- Body: **DM Sans**
 
 ## Motifs
-- **Stud-wall band** (`horizon-band`): stacked green→copper→amber framing layers
-- **Blueprint grid** (`grain`): faint engineering grid texture for hero/CTA bands
-- Frame top-edge accent on cards (`card-arch::before`): green→copper→amber
+- **Topographic contour band** (`horizon-band`): layered teal→leaf→slate strata
+- **Topographic contour texture** (`grain`): concentric contour lines + faint grid for hero/CTA bands
+- Contour top-edge accent on cards (`card-arch::before`): teal→leaf→slate
 
 ## Components & motion
 - motion (Framer) staggered hero entrances, scroll-reveal (`FadeIn`), count-up stats (`Counter`)
 - lenis smooth scroll (`SmoothScroll`)
 - All animations honor `prefers-reduced-motion`
 
-## Generated imagery (11, HF FLUX.1-schnell)
-hero, framing-walls, truss-roof, jobsite, crew-portrait, commercial-build,
-scaffold-safety, lumber-package, blueprint-tools, nail-gun-action, og-image.
-Warm natural-wood tones with forest-green/copper accents; photorealistic, no text.
+## Generated imagery (HF FLUX.1-schnell)
+hero, site-aerial, pollution-cleanup, gl-operations, professional-design, abatement-crew,
+vacuum-truck, decon-facility, excavator-equipment, team-portrait, og-image.
+Environmental-remediation tones with teal/leaf accents; PPE crews, vacuum trucks, excavators,
+decon facilities; photorealistic, no text.

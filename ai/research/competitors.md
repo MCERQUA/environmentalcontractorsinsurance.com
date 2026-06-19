@@ -1,21 +1,24 @@
-# Competitor Landscape — Framing Contractor Insurance
+# Competitor Landscape — Environmental Contractor Insurance
 
-## Direct / adjacent (contractor insurance specialists)
+## Direct / adjacent (environmental & contractor insurance specialists)
 - National contractor-insurance agencies (Next Insurance, Hiscox, biBERK, CoverWallet) — broad,
-  generic small-business contractor coverage; often exclude height work and lack trades nuance.
-- Regional contractor brokers in TX/FL/Southeast framing markets.
-- Captive carriers (State Farm, Farmers) writing generic carpentry GL.
+  generic small-business contractor coverage; routinely deny pollution claims and lack environmental nuance.
+- Environmental specialty wholesalers and programs (AmWINS, CRC, RT Specialty) writing CPL via retail brokers.
+- Captive carriers (State Farm, Farmers) writing generic contractor GL with the standard pollution exclusion.
+- Large commercial brokers (Marsh, Aon, Gallagher) serving big environmental primes — overkill for mid-market crews.
 
-## Our wedge (why framers switch to CCA)
-1. **GL without height exclusions** — most cheap online policies exclude 2- and 3-story work,
-   roof framing, and truss setting. We place height-friendly GL.
-2. **Correct class 5403 workers' comp coding** — competitors mis-classify framers, causing
-   overcharges or audit/claim problems.
-3. **Coordinated builder's risk + tools floater** — closes the two most common framing losses
-   (lumber theft, tool theft) that generic policies miss.
-4. **Fast certificates & additional-insured endorsements** — minutes, not days, for GCs.
-5. **Trades-native broker** — former contractor on staff; no explaining the jobsite.
+## Our wedge (why environmental contractors switch to CCA)
+1. **Standalone CPL, not a worthless endorsement** — most cheap online policies add a limited pollution
+   endorsement that denies the very claims environmental contractors face. We place true CPL.
+2. **Correct abatement workers' comp class codes** — competitors mis-classify asbestos/mold/lead crews,
+   causing overcharges or audit/claim problems. We use 5473 and the right abatement codes.
+3. **Coordinated GL + CPL + professional + auto + equipment** — closes the gaps (pollution exclusion,
+   mobile equipment off-premises, hazmat hauling) that generic policies miss.
+4. **Fast certificates & additional-insured endorsements with pollution extension** — minutes, not days,
+   for refineries, GCs, developers, and government clients.
+5. **Environmental-market access** — A-rated environmental specialty markets other brokers can't reach.
 
 ## Positioning
-Specialty trades broker for framers, a division of Contractors Choice Agency (est. 2005),
-licensed all 50 states, A-rated markets. Not a generic small-business insurer.
+Specialty environmental contractor broker, a division of Contractors Choice Agency (est. 2005),
+licensed all 50 states, A-rated environmental markets. Not a generic small-business insurer —
+we know the pollution exclusion, the abatement class codes, and the cleanup claim.

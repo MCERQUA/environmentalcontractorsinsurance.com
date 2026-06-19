@@ -1,32 +1,32 @@
-# Topical Map — Framing Contractor Insurance
+# Topical Map — Environmental Contractor Insurance
 
-## Pillar: Framing Contractor Insurance (homepage)
-The umbrella program for wood framing & rough-carpentry crews.
+## Pillar: Environmental Contractor Insurance (homepage)
+The umbrella program for environmental remediation, abatement & hazmat crews.
 
 ## Cluster 1 — Coverage lines (service pages)
-- General Liability for Framing Contractors (height exclusions, additional insured)
-- Workers' Compensation — class 5403 carpentry (falls, nail-gun, saw)
-- Commercial Auto — trucks, trailers, lumber hauling
-- Builder's Risk — the structure & materials being framed
-- Tools & Equipment / Inland Marine — nail guns, saws, generators
-- Commercial Property — shop, yard, panel plant, inventory
-- Umbrella / Excess Liability — limits for GC requirements
-- Contractor License & Surety Bonds — license, permit, bid/performance
+- Contractors Pollution Liability (CPL) — the core policy, standalone not an endorsement
+- General Liability — environmental operations, coordinated with CPL (GL excludes pollution)
+- Professional Liability / E&O — remediation design, sampling, assessment, consulting
+- Workers' Compensation — asbestos (5473), mold, lead abatement class codes, hazmat handlers
+- Commercial Auto — vacuum trucks, tankers, roll-offs, super-suckers, hazmat hauling
+- Commercial Property — remediation yard, decon facility, office, contaminated-gear storage
+- Inland Marine / Mobile Equipment — excavators, frac tanks, HEPA vacs, monitors
+- Umbrella / Excess Liability — catastrophic contamination losses, high-limit client requirements
 
 ## Cluster 2 — Cost & buying (blog)
-- How much does framing contractor insurance cost?
-- Workers' comp class 5403 explained
-- Why your GL height exclusion could sink your business
-- Builder's risk vs. tools floater
-- Stopping jobsite lumber & tool theft
+- What is Contractors Pollution Liability (CPL) insurance?
+- Why your GL pollution exclusion is a time bomb
+- Environmental contractor insurance cost (2026)
+- Asbestos & mold abatement workers' comp explained
+- Mobile equipment coverage for remediation sites
 
 ## Cluster 3 — Geography (location pages)
-- Texas & Southwest · Southeast · Rocky Mountain · Pacific Northwest ·
-  Desert West · Great Lakes/Midwest · Northeast/Mid-Atlantic · California
+- Gulf Coast & Texas · Northeast & Mid-Atlantic · Great Lakes & Rust Belt ·
+  California & West Coast · Southeast · Rocky Mountain · Pacific Northwest · Southwest & Desert
 
 ## Cluster 4 — Trust & company (about, coverage, contact, quote)
-- Licensed all 50 states, NPN 8608479, founded 2005, A-rated carriers
-- 15-min quotes, 2-hour claims response, former framer on staff
+- Licensed all 50 states, NPN 8608479, founded 2005, A-rated environmental carriers
+- 15-min quotes, 2-hour claims response, environmental market access
 
 ## Internal linking
 Homepage → services → service detail → quote
