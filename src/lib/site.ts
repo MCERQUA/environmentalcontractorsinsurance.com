@@ -1,14 +1,14 @@
 // Centralized site data — used across nav, footer, schema, CTAs
-// Framing Contractor Insurance — wood framing / rough carpentry contractors
+// Environmental Contractor Insurance — environmental remediation / hazmat / pollution abatement contractors
 
 export const SITE = {
-  name: "Framing Contractor Insurance",
-  legalName: "Framing Contractor Insurance (by Contractors Choice Agency)",
-  domain: "framingcontractorinsurance.com",
-  url: "https://framingcontractorinsurance.com",
-  tagline: "Insurance for Wood Framing & Rough Carpentry Contractors",
+  name: "Environmental Contractor Insurance",
+  legalName: "Environmental Contractor Insurance (by Contractors Choice Agency)",
+  domain: "environmentalcontractorsinsurance.com",
+  url: "https://environmentalcontractorsinsurance.com",
+  tagline: "Insurance for Environmental Remediation & Hazmat Contractors",
   description:
-    "Specialized commercial insurance for framing contractors and rough carpentry crews — general liability, workers' comp (class 5403), builder's risk, tools & equipment floaters, commercial auto, and commercial property. Fall, nail-gun, and saw exposures underwritten right. Licensed all 50 states.",
+    "Specialized commercial insurance for environmental remediation contractors — Contractors Pollution Liability (CPL), general liability (written right around the pollution exclusion), professional liability/E&O, workers' comp for asbestos/mold/lead abatement, commercial auto for vacuum and tanker trucks, mobile equipment, commercial property, and umbrella/excess. Pollution and legal liability underwritten right. Licensed all 50 states.",
   phone: "844-967-5247",
   phoneAlt: "855-336-7189",
   phoneHref: "tel:+18449675247",
@@ -40,149 +40,149 @@ export const NAV_LINKS = [
 
 export const SERVICES = [
   {
+    slug: "pollution-liability",
+    title: "Contractors Pollution Liability (CPL)",
+    short: "The core coverage your GL excludes",
+    description:
+      "Coverage for pollution conditions arising from your remediation operations — asbestos, mold, lead, contaminated soil and groundwater, and hazardous waste — the exact exposure that standard general liability excludes. The essential, core policy every environmental contractor must carry.",
+    icon: "Leaf",
+    keywords: ["contractors pollution liability", "CPL insurance", "pollution liability insurance environmental contractor", "asbestos abatement insurance", "environmental remediation insurance"],
+  },
+  {
     slug: "general-liability",
     title: "General Liability Insurance",
-    short: "For framing & rough carpentry operations",
+    short: "Environmental operations — written around the pollution exclusion",
     description:
-      "Third-party bodily injury and property damage protection for your framing crews, jobsites, and subcontracted work — including products-completed operations and the GC certificates that get you onto the project.",
+      "Third-party bodily injury and property damage protection for your remediation crews and jobsites — including products-completed operations and the GC, developer, and government additional-insured certificates that get you onto the project. Coordinated with CPL because GL excludes pollution.",
     icon: "ShieldCheck",
-    keywords: ["framing contractor general liability", "rough carpentry insurance", "framing subcontractor GL", "CG 00 01 framing", "framer liability insurance"],
+    keywords: ["environmental contractor general liability", "GL pollution exclusion", "remediation contractor GL", "environmental subcontractor insurance", "additional insured environmental"],
+  },
+  {
+    slug: "professional-liability",
+    title: "Professional Liability / E&O",
+    short: "Remediation design, sampling & consulting",
+    description:
+      "Errors & omissions coverage for the professional services environmental contractors provide — remediation design, site assessment, sampling and analysis, monitoring, and consulting — protection for the financial cost of a design or advisory error that a pollution or GL policy will not cover.",
+    icon: "FileSearch",
+    keywords: ["environmental contractor professional liability", "remediation E&O insurance", "environmental consultant errors and omissions", "site assessment professional insurance", "environmental engineering liability"],
   },
   {
     slug: "workers-compensation",
     title: "Workers' Compensation",
-    short: "Class 5403 carpentry — fall & saw exposures",
+    short: "Asbestos, mold & lead abatement class codes",
     description:
-      "Coverage for the injury patterns unique to framing crews — falls from height, nail-gun and saw lacerations, struck-by and material-handling injuries — with correct class 5403 coding so you're not overpaying or underinsured.",
+      "Coverage for the injury and exposure patterns unique to environmental crews — asbestos, mold, and lead abatement class codes, hazmat handlers, chemical and biological exposure, heat and confined-space injury — with correct classification so you're not overpaying or underinsured.",
     icon: "HardHat",
-    keywords: ["framing contractor workers comp", "class 5403 workers compensation", "carpentry workers comp", "framer fall injury insurance", "nail gun injury workers comp"],
+    keywords: ["environmental contractor workers comp", "asbestos abatement workers comp class code", "mold remediation workers compensation", "hazmat workers comp", "lead abatement class code"],
   },
   {
     slug: "commercial-auto",
     title: "Commercial Auto Insurance",
-    short: "Trucks, trailers & lumber delivery",
+    short: "Vacuum trucks, tankers, roll-offs & super-suckers",
     description:
-      "Coverage for the pickup trucks, dump trailers, and lumber haulers that move your crew and materials between jobsites — including hired/non-owned and loading liability.",
+      "Coverage for the vacuum trucks, tanker trucks, roll-off haulers, and super-suckers that move your crew, contaminated soil, liquids, and equipment between remediation sites and disposal facilities — including hired/non-owned and loading liability.",
     icon: "Truck",
-    keywords: ["framing contractor commercial auto", "contractor truck insurance", "lumber delivery insurance", "trailer insurance carpenter", "hired non owned auto contractor"],
+    keywords: ["environmental contractor commercial auto", "vacuum truck insurance", "tanker truck insurance", "roll off truck insurance remediation", "super sucker insurance"],
   },
   {
-    slug: "builders-risk",
-    title: "Builder's Risk Insurance",
-    short: "The structure & materials you're framing",
+    slug: "commercial-property",
+    title: "Commercial Property Insurance",
+    short: "Remediation yard, decon facility & office",
     description:
-      "Course-of-construction coverage for the building you're framing — lumber packages, installed materials, and labor — against fire, wind, theft, and vandalism while the project is open to loss.",
-    icon: "Building2",
-    keywords: ["builders risk framing contractor", "course of construction insurance", "framing phase insurance", "lumber theft insurance jobsite", "soft cost builders risk"],
+      "All-risk property coverage for the environmental contractor's yard, equipment decontamination facility, office, and storage — built for the specialized equipment, hazardous-material handling, and environmental exposures of a remediation operation.",
+    icon: "Factory",
+    keywords: ["environmental contractor commercial property", "remediation yard insurance", "decontamination facility property insurance", "environmental contractor shop insurance", "hazmat storage property coverage"],
   },
   {
     slug: "inland-marine-equipment",
-    title: "Tools & Equipment / Inland Marine",
-    short: "Nail guns, saws, compressors & trailers",
+    title: "Inland Marine / Mobile Equipment",
+    short: "Excavators, frac tanks, HEPA vacs & monitors",
     description:
-      "Scheduled tools-and-equipment coverage for the pneumatic nailers, miter saws, generators, and compressors that walk off jobsites — plus installation floaters that cover materials in transit to the frame.",
+      "Scheduled coverage for the heavy mobile equipment and specialty gear remediation contractors depend on — excavators, frac tanks, HEPA vacuums, air monitors, confined-space gear, and trailers — that travels between jobsites and follows the equipment wherever it goes.",
     icon: "Wrench",
-    keywords: ["framing tools insurance", "contractor tools and equipment floater", "inland marine carpenter", "stolen tools insurance", "installation floater framing"],
-  },
-  {
-    slug: "property",
-    title: "Commercial Property Insurance",
-    short: "Shop, yard, office & inventory",
-    description:
-      "All-risk property coverage for the framer's shop, storage yard, prefab wall-panel facility, and lumber/inventory — built for the combustible loading and hot-work exposures of a wood operation.",
-    icon: "Factory",
-    keywords: ["framer commercial property insurance", "carpenter shop insurance", "wall panel plant insurance", "lumber yard property insurance", "contractor property coverage"],
+    keywords: ["environmental contractor inland marine", "mobile equipment insurance remediation", "frac tank insurance", "HEPA vacuum insurance", "excavator insurance environmental"],
   },
   {
     slug: "umbrella-excess-liability",
     title: "Umbrella / Excess Liability",
-    short: "Limits to $10M+",
+    short: "Limits to $10M+ for catastrophic contamination losses",
     description:
-      "Layered limits above your GL, auto, and employers' liability — essential when a fall, a framed-structure fire, or a multi-party jobsite loss could otherwise exhaust your primary coverage.",
+      "Layered limits above your GL, CPL, auto, and employers' liability — essential when a contamination release, a multi-party Superfund claim, or a catastrophic jobsite loss could otherwise exhaust your primary coverage and threaten the entire company.",
     icon: "Umbrella",
-    keywords: ["framing contractor umbrella insurance", "excess liability carpenter", "contractor umbrella policy", "high limit liability framing", "jobsite liability umbrella"],
-  },
-  {
-    slug: "contractors-bonds",
-    title: "Contractor's License & Surety Bonds",
-    short: "License, permit & performance bonds",
-    description:
-      "The bonds that keep you legal and competitive — state contractor license bonds, permit bonds, and bid/performance bonds for the GCs and developers who require them before you set the first plate.",
-    icon: "FileCheck",
-    keywords: ["framing contractor license bond", "contractor surety bond", "performance bond carpenter", "permit bond framing", "bid bond contractor"],
+    keywords: ["environmental contractor umbrella insurance", "excess liability remediation", "pollution liability umbrella", "high limit liability environmental contractor", "catastrophic contamination insurance"],
   },
 ] as const;
 
 export const LOCATIONS = [
   {
-    slug: "texas-southwest",
-    name: "Texas & the Southwest",
-    region: "TX · NM · AZ",
+    slug: "gulf-coast-texas",
+    name: "Gulf Coast & Texas",
+    region: "TX · LA · MS · AL",
     blurb:
-      "The busiest framing market in the country. We insure Texas and Southwest framing crews running high-volume residential production, master-planned communities, and fast turnaround on slab-on-grade builds.",
+      "The densest petrochemical and refining corridor in North America. We insure Gulf Coast and Texas environmental contractors running soil and groundwater remediation, tank removal, and hazardous waste cleanup at refineries, chemical plants, and brownfield sites along the Gulf.",
+  },
+  {
+    slug: "northeast-mid-atlantic",
+    name: "Northeast & Mid-Atlantic",
+    region: "NY · NJ · PA · New England",
+    blurb:
+      "Industrial legacy markets. Northeast and Mid-Atlantic environmental contractors handle brownfield redevelopment, Superfund cleanup, vapor intrusion, and historic industrial site remediation — coverage built for dense, regulated, old-industrial environments.",
+  },
+  {
+    slug: "great-lakes-rust-belt",
+    name: "Great Lakes & Rust Belt",
+    region: "MI · OH · IL · IN · WI",
+    blurb:
+      "Rust Belt environmental contractors redeveloping shuttered steel, auto, and manufacturing sites. Coverage for heavy industrial demolition, contaminated soil removal, groundwater plume remediation, and the brownfield tax-credit redevelopment pipeline.",
+  },
+  {
+    slug: "california-west-coast",
+    name: "California & West Coast",
+    region: "California",
+    blurb:
+      "The most stringent environmental regulation in the country. California environmental contractors face DTSC, RWQCB, and strict cleanup standards — coverage built for vapor intrusion, soil vapor extraction, and the state's demanding environmental and wildfire-debris environment.",
   },
   {
     slug: "southeast",
     name: "U.S. Southeast",
     region: "Florida · Georgia · Carolinas",
     blurb:
-      "Hurricane-zone framing underwriting for Southeast crews — wind and named-storm exposure, Florida building code compliance, and high-volume coastal and inland residential production.",
+      "Southeast environmental contractors handling mold and water-damage remediation, hurricane-debris cleanup, coastal industrial sites, and leaking underground storage tanks — coverage for humid-climate mold, storm response, and high water-table work.",
   },
   {
     slug: "rocky-mountain",
-    name: "Rocky Mountain West",
-    region: "Colorado · Idaho · Utah",
+    name: "Rocky Mountain",
+    region: "Colorado · Utah · Idaho · Montana",
     blurb:
-      "Front-Range and Intermountain West framing operations. Programs sized for crews serving the region's booming residential and multifamily construction with snow and elevation exposures.",
+      "Rocky Mountain environmental contractors serving mining-legacy sites, oil and gas, and federal facility cleanup — coverage for hard-rock mining remediation, abandoned mine lands, and remote-site work across the Intermountain West.",
   },
   {
     slug: "pacific-northwest",
     name: "Pacific Northwest",
     region: "Oregon · Washington",
     blurb:
-      "PNW framing contractors running wet-climate, seismic-zone builds. Coverage that accounts for tight energy-code framing, engineered lumber, and year-round wet jobsite conditions.",
+      "PNW environmental contractors handling timber and mill-site cleanup, fishery and water-quality work, and port and industrial waterfront remediation — coverage built for wet-climate, riparian, and contaminated-sediment environments.",
   },
   {
-    slug: "desert-west",
-    name: "Desert West",
-    region: "Arizona · Nevada",
+    slug: "southwest-desert",
+    name: "Southwest & Desert",
+    region: "Arizona · Nevada · New Mexico",
     blurb:
-      "Phoenix, Las Vegas, and Tucson framing operations. Programs for high-volume desert residential production, slab construction, and rapid crew mobilization across master-planned developments.",
-  },
-  {
-    slug: "great-lakes",
-    name: "Great Lakes & Midwest",
-    region: "Michigan · Ohio · Illinois · Indiana",
-    blurb:
-      "Midwest framing contractors serving suburban and rural residential markets. Coverage for seasonal build cycles, freeze/thaw framing conditions, and crew variability.",
-  },
-  {
-    slug: "northeast",
-    name: "Northeast & Mid-Atlantic",
-    region: "NY · NJ · PA · New England",
-    blurb:
-      "Northeast framers running dense residential, remodel, and addition work. Coverage that meets the region's strict licensing, winter build limitations, and historic-district requirements.",
-  },
-  {
-    slug: "california-west",
-    name: "California & West Coast",
-    region: "California",
-    blurb:
-      "Seismic-zone and wildfire-exposure underwriting for California framing contractors. Programs built for Title 24 framing, WUI builds, and the state's demanding CSLB licensing environment.",
+      "Southwest and desert environmental contractors serving mining, military, and dry-climate industrial sites — coverage for arid-site soil remediation, mine-scarred land, and the region's federal facility and tribal-land cleanup work.",
   },
 ] as const;
 
 export const CREDENTIALS = [
   { label: "Licensed in all 50 states", icon: "MapPin" },
   { label: "Founded 2005 — 20+ years", icon: "CalendarCheck" },
-  { label: "Former framer on staff", icon: "HardHat" },
+  { label: "Environmental market access", icon: "Leaf" },
   { label: "15-minute quote turnaround", icon: "Timer" },
   { label: "2-hour claims response", icon: "Zap" },
   { label: "A.M. Best A+ carrier partners", icon: "Award" },
 ] as const;
 
 export const STATS = [
-  { value: 600, suffix: "+", label: "Framing crews insured nationwide", prefix: "" },
+  { value: 450, suffix: "+", label: "Environmental crews insured nationwide", prefix: "" },
   { value: 20, suffix: "+", label: "Years insuring trades contractors", prefix: "" },
   { value: 15, suffix: " min", label: "Average quote turnaround", prefix: "" },
   { value: 50, suffix: "", label: "States licensed & writing", prefix: "" },
@@ -191,23 +191,23 @@ export const STATS = [
 export const TESTIMONIALS = [
   {
     quote:
-      "Every general contractor we frame for needs a GL certificate with us named additional insured before we can roll. CCA turns those around in minutes and built a program that actually covers our falls and nail-gun claims — not the generic handyman policy our last broker sold us.",
+      "Every refinery and chemical plant we work in needs us named additional insured AND requires real pollution liability — not the endorsement our old broker told us was 'basically the same thing.' CCA placed a true CPL policy with the limits the GCs and the EPA contractors demand, and turns certificates around in minutes.",
     name: "Marcus T.",
-    role: "Framing Company Owner",
+    role: "Environmental Remediation Owner",
     location: "Texas",
   },
   {
     quote:
-      "When a lumber package walked off our jobsite overnight, the tools-and-equipment floater CCA set up paid out fast and we kept the schedule. They get that a framing crew lives and dies by its gear and its materials.",
+      "When a frac tank leaked at a site, the pollution claim could have wiped us out. The CPL program CCA built paid the cleanup and defense fast and we kept the contract. They actually understand what 'pollution condition' means and what a remediation crew does every day.",
     name: "Daniela R.",
     role: "Operations Manager",
-    location: "Florida",
+    location: "Louisiana",
   },
   {
     quote:
-      "Our workers' comp was coded as generic construction and we were getting killed on premium. CCA re-classed us properly under 5403, documented our fall-protection program, and dropped our rate while increasing coverage. Wish we'd switched years ago.",
+      "Our workers' comp was coded as generic construction and we were getting killed on premium for asbestos and mold abatement crews. CCA re-classed us under the right abatement codes, documented our respirator and exposure program, and dropped our rate while increasing coverage. Wish we'd switched years ago.",
     name: "Tyler J.",
-    role: "Crew Owner",
+    role: "Abatement Company Owner",
     location: "Colorado",
   },
 ] as const;
