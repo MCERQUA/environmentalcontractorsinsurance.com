@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-# Generate all images for framingcontractorinsurance.com via HuggingFace FLUX.1-schnell
+# Generate all images for environmentalcontractorsinsurance.com via HuggingFace FLUX.1-schnell
 # Robust: retries up to 4 times, verifies each is a valid image >= 30KB
 set -uo pipefail
 
-OUT="/workspace/Websites/framingcontractorinsurance.com/public/images"
+OUT="/workspace/Websites/environmentalcontractorsinsurance.com/public/images"
 mkdir -p "$OUT"
 
 gen() {
@@ -39,40 +39,40 @@ gen() {
   return 1
 }
 
-# === 11 images — framing contractor operations ===
+# === 11 images — environmental remediation / hazmat contractor operations ===
 
 gen "hero.jpg" \
-  "Photorealistic cinematic wide shot of a residential wood framing crew raising an exterior wall frame on a new house build. Workers in hi-vis vests and hard hats, nail guns, bright clear morning light, exposed studs and engineered floor trusses, organized jobsite with lumber package. Warm natural wood tones with deep forest-green and copper accents, high-end commercial construction photography, no text, no watermark" 4
+  "Photorealistic cinematic wide shot of an environmental remediation crew in full white hazmat PPE suits and full-face respirators working at a contaminated industrial cleanup site, operating excavation and decontamination equipment, taped containment area, bright clear daylight. Clean earth tones with deep teal and leaf-green accents, high-end commercial industrial photography, no text, no watermark" 4
 
-gen "framing-walls.jpg" \
-  "Photorealistic photo of two framing carpenters assembling a wood stud wall on the deck of a house under construction, measuring and nailing 2x6 studs, nail gun in action, neat sawhorses and lumber, blue sky. Professional construction photography, warm wood tones, shallow depth of field, no text" 4
+gen "site-aerial.jpg" \
+  "Photorealistic aerial drone view of a large environmental remediation site: excavators working a contaminated soil area, frac tanks and water treatment equipment, containment berms, roll-off boxes, a remediation crew in PPE, clear daylight, organized industrial site. Professional commercial industrial photography, teal and earth tones, no text" 4
 
-gen "truss-roof.jpg" \
-  "Photorealistic photo of roof trusses being set on a new home frame, crane lowering a wooden roof truss into place, framers guiding it on top plates, sunny day, structural roof skeleton. Professional commercial construction photography, warm tones, no text" 4
+gen "pollution-cleanup.jpg" \
+  "Photorealistic photo of a soil and groundwater remediation operation: a crew in PPE overseeing a treatment system with pumps, piping and frac tanks at a brownfield site, monitoring equipment, contained excavation. Professional commercial environmental photography, clean earth tones with teal accents, no text" 4
 
-gen "jobsite.jpg" \
-  "Photorealistic elevated photo of an active residential framing jobsite: a partially framed two-story house skeleton with stacked lumber, chop saw station, air compressor, framers working on multiple levels. Clear daylight, organized site, professional construction photography, no text" 4
+gen "gl-operations.jpg" \
+  "Photorealistic photo of an environmental contractor crew in hi-vis vests and hard hats managing a hazardous-materials jobsite at an industrial facility, coordinating an excavation near storage tanks, taped containment and signage, clear daylight. Professional commercial construction photography, clean industrial tones, no text" 4
 
-gen "crew-portrait.jpg" \
-  "Photorealistic professional portrait of a confident framing contractor wearing a hard hat, safety glasses and branded flannel shirt, arms crossed, standing on a home building site with framed walls behind him. Warm friendly genuine trustworthy expression, golden hour light, commercial photography, no text" 4
+gen "professional-design.jpg" \
+  "Photorealistic close-up of an environmental engineer in a hard hat reviewing site assessment reports, sampling data and remediation design drawings on a tablet and rolled plans at a field office desk, monitoring equipment nearby, soft natural light. Professional commercial photography, clean modern tones, no text" 4
 
-gen "commercial-build.jpg" \
-  "Photorealistic photo of a large commercial or multifamily building under construction, steel-and-wood framing, multiple framers on scaffolding installing floor and wall systems, crane in background, bright industrial daylight. Professional commercial construction photography, no text" 4
+gen "abatement-crew.jpg" \
+  "Photorealistic photo of an asbestos and mold abatement crew in full white Tyvek suits and full-face respirators working inside a containment area with poly sheeting, HEPA vacuum and negative-air machine, careful controlled demolition. Bright industrial light, focus on safety and exposure control, professional commercial photography, no text" 4
 
-gen "scaffold-safety.jpg" \
-  "Photorealistic photo of framing carpenters working safely on pump-jack scaffolding and a framed two-story wall, wearing fall protection harnesses and hard hats, installing sheathing. Bright daylight, focus on safety, professional construction photography, no text" 4
+gen "vacuum-truck.jpg" \
+  "Photorealistic photo of a heavy industrial vacuum truck and a tanker truck parked at an environmental cleanup site, hoses connected for transferring contaminated liquids and waste, operator in PPE and hard hat, industrial facility background. Professional commercial photography, clean industrial tones with teal accents, no text" 4
 
-gen "lumber-package.jpg" \
-  "Photorealistic photo of a fresh lumber package neatly stacked on a residential jobsite, dimensional lumber and engineered I-joists on dunnage, a framers truck in the background, blue sky. Professional commercial photography, warm natural wood tones, no text" 4
+gen "decon-facility.jpg" \
+  "Photorealistic photo of the exterior of a remediation contractor's yard and equipment decontamination facility: a clean industrial metal building with roll-up doors, decon wash pad, organized frac tanks and roll-off boxes, fenced yard, clear daylight. Professional commercial industrial photography, clean earth tones, no text" 4
 
-gen "blueprint-tools.jpg" \
-  "Photorealistic close-up of rolled architectural house plans and blueprints resting on a sawhorse next to a framing square, pencil, tape measure and a framing nailer, soft warm light, shallow depth of field. Professional commercial photography, no text" 4
+gen "excavator-equipment.jpg" \
+  "Photorealistic photo of a large yellow tracked excavator and frac tanks staged at an environmental remediation site, HEPA vacuum and air-monitoring equipment nearby, a crew in PPE, contained soil area, bright daylight. Professional commercial industrial photography, clean earth tones with teal accents, no text" 4
 
-gen "nail-gun-action.jpg" \
-  "Photorealistic action close-up of a framing carpenter firing a pneumatic nail gun into a top plate, wood grain and sawdust visible, gloved hands, bright jobsite light, sharp detail. Professional construction photography, warm tones, no text" 4
+gen "team-portrait.jpg" \
+  "Photorealistic professional portrait of a confident environmental remediation contractor wearing a hard hat, safety glasses and hi-vis vest, arms crossed, standing at a cleanup site with excavators and frac tanks behind, genuine trustworthy expression, golden hour light. Commercial photography, no text" 4
 
 gen "og-image.jpg" \
-  "Photorealistic cinematic wide banner image of a framing crew raising a wall on a new home build, warm natural wood tones, professional commercial construction photography, wide composition, no text, no watermark" 4
+  "Photorealistic cinematic wide banner image of an environmental remediation crew in full hazmat PPE and respirators working at a contaminated industrial cleanup site with excavation equipment, clean earth tones with deep teal and leaf-green accents, professional commercial industrial photography, wide composition, no text, no watermark" 4
 
 echo "=== ALL IMAGE GENERATION ATTEMPTS COMPLETE ==="
 ls -la "$OUT"
