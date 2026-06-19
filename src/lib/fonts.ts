@@ -1,17 +1,17 @@
-import { Sora, Inter } from "next/font/google";
+import { Outfit, DM_Sans } from "next/font/google";
 
-// Body font — Inter (clean, legible for dense coverage copy)
-export const bodyFont = Inter({
+// Body font — DM Sans (clean, legible for dense coverage copy)
+export const bodyFont = DM_Sans({
   subsets: ["latin"],
   variable: "--font-body",
   weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
-// Heading font — Sora (geometric, structural, modern framing feel)
-export const headingFont = Sora({
+// Heading font — Outfit (geometric, modern, clean-earth feel)
+export const headingFont = Outfit({
   subsets: ["latin"],
   variable: "--font-heading",
-  weight: ["400", "600", "700", "800"],
+  weight: ["400", "500", "600", "700", "800"],
   display: "swap",
 });
