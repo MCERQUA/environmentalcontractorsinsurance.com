@@ -17,7 +17,7 @@ export const SITE = {
   founded: 2005,
   npn: "8608479",
   address: {
-    street: "12220 E Riggs Road, Suite #105",
+    street: "12220 E Riggs Road, Suite #104",
     city: "Chandler",
     state: "AZ",
     zip: "85249",
@@ -188,26 +188,3 @@ export const STATS = [
   { value: 50, suffix: "", label: "States licensed & writing", prefix: "" },
 ] as const;
 
-export const TESTIMONIALS = [
-  {
-    quote:
-      "Every refinery and chemical plant we work in needs us named additional insured AND requires real pollution liability — not the endorsement our old broker told us was 'basically the same thing.' CCA placed a true CPL policy with the limits the GCs and the EPA contractors demand, and turns certificates around in minutes.",
-    name: "Marcus T.",
-    role: "Environmental Remediation Owner",
-    location: "Texas",
-  },
-  {
-    quote:
-      "When a frac tank leaked at a site, the pollution claim could have wiped us out. The CPL program CCA built paid the cleanup and defense fast and we kept the contract. They actually understand what 'pollution condition' means and what a remediation crew does every day.",
-    name: "Daniela R.",
-    role: "Operations Manager",
-    location: "Louisiana",
-  },
-  {
-    quote:
-      "Our workers' comp was coded as generic construction and we were getting killed on premium for asbestos and mold abatement crews. CCA re-classed us under the right abatement codes, documented our respirator and exposure program, and dropped our rate while increasing coverage. Wish we'd switched years ago.",
-    name: "Tyler J.",
-    role: "Abatement Company Owner",
-    location: "Colorado",
-  },
-] as const;
