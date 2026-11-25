@@ -170,7 +170,6 @@ export const GENERAL_DETAILS: Record<string, DetailField[]> = {
   ],
   otherInsurance: [
     { key: 'lineOfBusiness', label: 'Line of Business' },
-    { key: 'policyNumber', label: 'Policy Number' },
   ],
   negativeFinancialAction: [
     { key: 'occurenceDate', label: 'Occurrence Date', kind: 'date' },
@@ -208,6 +207,8 @@ export const QUESTIONS_WITH_EXPLAIN = YN_QUESTIONS.map(q => q.key).filter(
 )
 
 export interface QuoteOptions {
+  /** When the FEIN is asked, must it be filled? (default true; excavation port: false, optional box, format still checked when filled). */
+  feinRequired?: boolean
   /** Ask for the FEIN and require it (CCA: true). Thin trade forms may set false (the field is then not shown/posted). */
   fein?: boolean
   /** Ask for the physical county and require it (CCA: true). */
@@ -269,7 +270,7 @@ export const YN_AUDIT_REQUIRED: string[] = [
   "promotionalSafetyClaims"
 ]
 
-export const DEFAULT_OPTIONS: Required<QuoteOptions> = { fein: true, physicalCounty: true, yn: true, ynRequired: true, subcontractedDescriptionRequired: true, tradeTypeOptions: TRADE_TYPES }
+export const DEFAULT_OPTIONS: Required<QuoteOptions> = { feinRequired: true, fein: true, physicalCounty: true, yn: true, ynRequired: true, subcontractedDescriptionRequired: true, tradeTypeOptions: TRADE_TYPES }
 
 export function resolveOptions(o: QuoteOptions = {}): Required<QuoteOptions> {
   return { ...DEFAULT_OPTIONS, ...o }
@@ -517,7 +518,7 @@ export function validateQuote(d: Flat, now: Date = new Date(), options: QuoteOpt
   }
 
   ALWAYS_REQUIRED.forEach(k => need(k))
-  if (opts.fein) need('fein')
+  if (opts.fein && opts.feinRequired) need('fein')
   if (opts.physicalCounty) need('physicalCounty')
 
   // conditionals

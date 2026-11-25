@@ -97,7 +97,7 @@ export default function QuotePage() {
                   format="json"
                   netlifyFallback="/__forms.html"
                   extraFields={{ form_name: "quote", source: "environmentalcontractorsinsurance.com" }}
-                  options={{ yn: "audit" }}
+                  options={{ yn: true, feinRequired: false }}
                   tradeTypeOptions={TRADE_TYPES}
                   defaults={{ coverageTypes: "General Liability" }}
                   prefaceQuestions={[

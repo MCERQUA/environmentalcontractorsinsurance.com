@@ -26,7 +26,21 @@ export interface PrefaceQuestion {
   required?: boolean
 }
 
+export interface LegacyQuestion {
+  /** posted under EXACTLY this name (a name the site already posted before the port) */
+  name: string
+  label: string
+  type?: 'text' | 'number' | 'date' | 'textarea' | 'select' | 'checks'
+  options?: string[]
+  /** checks only: values ticked on first render */
+  defaultChecked?: string[]
+}
+
 export interface QuoteFormProps {
+  /** Pre-port field names kept verbatim: extra inputs posted under their own names (optional, never required). */
+  legacyQuestions?: LegacyQuestion[]
+  /** Derive pre-port names from the canonical answers (called with the sanitised canonical data); results are posted as-is. */
+  deriveLegacy?: (data: Flat) => Record<string, string>
   /** Netlify form name / form-name value (CCA: 'quote-request'; most Josh trade sites: 'quote'). */
   formName: string
   /** Human trade name shown in headings, e.g. 'Roll-Off Dumpster'. */
@@ -82,6 +96,9 @@ export function QuoteForm(props: QuoteFormProps) {
   const prefaceQs = props.prefaceQuestions ?? []
   const [v, setV] = useState<Flat>(() => ({ ...emptyQuote(), ...(props.defaults as Flat) }))
   const [pf, setPf] = useState<Record<string, string>>({})
+  const legacyQs = props.legacyQuestions ?? []
+  const legacyInit = () => Object.fromEntries(legacyQs.filter(q => q.type === 'checks' && q.defaultChecked).map(q => [q.name, (q.defaultChecked ?? []).join(', ')]))
+  const [lg, setLg] = useState<Record<string, string>>(legacyInit)
   const [touched, setTouched] = useState<Record<string, boolean>>({})
   const [busy, setBusy] = useState(false)
   const [status, setStatus] = useState<'idle' | 'ok' | 'bad'>('idle')
@@ -203,6 +220,29 @@ export function QuoteForm(props: QuoteFormProps) {
       <input id={`f-${name}`} name={name} className={C.input} value={val} onChange={e => setP(e.target.value)} onBlur={() => touch(name)} /><Err n={name} /></div>)
   }
 
+  // pre-port names, optional, posted verbatim (checks join every ticked value with ', ')
+  const legacyField = (q: LegacyQuestion) => {
+    const val = lg[q.name] ?? ''
+    const setL = (x: string) => setLg(p => ({ ...p, [q.name]: x }))
+    const id = `f-legacy-${q.name}`
+    if (q.type === 'checks') {
+      const picked = val ? val.split(', ') : []
+      return (<fieldset key={q.name}><legend className={C.legend}>{q.label}</legend>
+        <div className="flex flex-wrap gap-x-6 gap-y-1">{(q.options ?? []).map(o => (
+          <label key={o} className={C.option}><input type="checkbox" name={q.name} value={o} checked={picked.includes(o)}
+            onChange={() => { const n = picked.includes(o) ? picked.filter(x => x !== o) : [...picked, o]; setL((q.options ?? []).filter(x => n.includes(x)).join(', ')) }} />{o}</label>))}</div></fieldset>)
+    }
+    if (q.type === 'select')
+      return (<div key={q.name}><label className={C.label} htmlFor={id}>{q.label}</label>
+        <select id={id} name={q.name} className={C.input} value={val} onChange={e => setL(e.target.value)}>
+          <option value="">Select</option>{(q.options ?? []).map(o => <option key={o}>{o}</option>)}</select></div>)
+    if (q.type === 'textarea')
+      return (<div key={q.name}><label className={C.label} htmlFor={id}>{q.label}</label>
+        <textarea id={id} name={q.name} rows={3} className={C.input} value={val} onChange={e => setL(e.target.value)} /></div>)
+    return (<div key={q.name}><label className={C.label} htmlFor={id}>{q.label}</label>
+      <input id={id} name={q.name} type={q.type ?? 'text'} className={C.input} value={val} onChange={e => setL(e.target.value)} /></div>)
+  }
+
   const copyMailing = () =>
     setV(p => ({ ...p, physicalAddress: p.address.slice(0, MAX_LEN.physicalAddress), physicalCity: p.city.slice(0, MAX_LEN.physicalCity), physicalState: p.state, physicalZip: p.zip }))
 
@@ -268,6 +308,8 @@ export function QuoteForm(props: QuoteFormProps) {
       const payload: Record<string, string> = {}
       for (const f of fieldsFor(opts)) payload[f] = data[f] ?? ''
       for (const q of prefaceQs) payload[`_info_${q.name}`] = pf[q.name] ?? ''
+      if (props.deriveLegacy) Object.assign(payload, props.deriveLegacy(data))
+      for (const q of legacyQs) payload[q.name] = lg[q.name] ?? ''
       if (attribution) { payload.traffic_source = attr.current.traffic_source; payload.landing_url = attr.current.landing_url }
       Object.assign(payload, props.extraFields ?? {})
       const json = props.format === 'json'
@@ -291,7 +333,7 @@ export function QuoteForm(props: QuoteFormProps) {
         if (!res.ok) throw new Error(String(res.status)) // fetch resolves on 4xx/5xx: status says whether the lead was taken
       }
       setStatus('ok'); setMessage(props.successMessage ?? 'Thank you. We received your quote request and will be in touch within 24 hours.')
-      setV({ ...emptyQuote(), ...(props.defaults as Flat) }); setPf({}); setTouched({})
+      setV({ ...emptyQuote(), ...(props.defaults as Flat) }); setPf({}); setLg(legacyInit()); setTouched({})
       props.onSuccess?.()
     } catch {
       setStatus('bad'); setMessage(props.errorMessage ?? 'Something went wrong. Please call us or try again.')
@@ -320,7 +362,7 @@ export function QuoteForm(props: QuoteFormProps) {
           {text('businessName', 'Business name')}{text('dba', 'DBA (if any)', { required: false })}
           {select('entityType', 'Business entity', ENTITY_TYPES)}
           {text('businessStartDate', 'Date business started', { type: 'date' })}
-          {opts.fein && text('fein', 'FEIN (XX-XXXXXXX)', { ph: '00-0000000' })}
+          {opts.fein && text('fein', 'FEIN (XX-XXXXXXX)', { ph: '00-0000000', required: opts.feinRequired })}
           {text('email', 'Email', { type: 'email' })}{text('phone', 'Phone', { type: 'tel' })}
         </div>
       </section>
@@ -400,6 +442,13 @@ export function QuoteForm(props: QuoteFormProps) {
         </fieldset>
         {area('notes', 'Anything else we should know?', undefined, false)}
       </section>
+
+      {legacyQs.length > 0 && (
+        <section className={C.section}>
+          <h3 className={C.heading}>More about your {props.tradeName} operation (optional)</h3>
+          <div className={C.grid}>{legacyQs.map(legacyField)}</div>
+        </section>
+      )}
 
       {ynKeys.length > 0 && (
         <section className={C.section}>
